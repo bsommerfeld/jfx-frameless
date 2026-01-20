@@ -1,6 +1,8 @@
 package de.bsommerfeld.jfx.frameless;
 
 import de.bsommerfeld.jfx.frameless.titlebar.TitleBar;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
@@ -38,7 +40,7 @@ public class WindowShellBuilder {
     private Node rightSidebar;
     private Node footer;
     private Node backgroundLayer;
-    private String stylesheet;
+    private final List<String> stylesheets = new ArrayList<>();
 
     private WindowShellBuilder(Stage stage) {
         this.stage = stage;
@@ -161,10 +163,10 @@ public class WindowShellBuilder {
     }
 
     /**
-     * Adds a stylesheet by classpath reference.
+     * Adds a stylesheet by classpath reference. Can be called multiple times.
      */
     public WindowShellBuilder stylesheet(String cssPath) {
-        this.stylesheet = cssPath;
+        this.stylesheets.add(cssPath);
         return this;
     }
 
@@ -208,7 +210,7 @@ public class WindowShellBuilder {
             shell.withBackgroundLayer(backgroundLayer);
         }
 
-        if (stylesheet != null) {
+        for (String stylesheet : stylesheets) {
             shell.withStylesheet(stylesheet);
         }
 
