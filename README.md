@@ -40,13 +40,13 @@ Modular window shell toolkit for JavaFX. Compose custom undecorated windows from
 <dependency>
     <groupId>de.bsommerfeld</groupId>
     <artifactId>jfx-frameless</artifactId>
-    <version>0.1</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
 **Gradle:**
 ```gradle
-implementation 'de.bsommerfeld:jfx-frameless:0.1'
+implementation 'de.bsommerfeld:jfx-frameless:0.1.1'
 ```
 
 JavaFX is `provided`. Add `javafx-controls` (Maven: `org.openjfx:javafx-controls:21`, Gradle: same).
