@@ -8,7 +8,7 @@ Modular window shell toolkit for JavaFX. Compose custom undecorated windows from
 <tr>
 <td align="center">
 
-![Showcase](https://via.placeholder.com/800x450?text=Screenshots+and+Demos+Coming+Soon)
+![Showcase](https://github.com/user-attachments/assets/6b0f34fd-0571-4cac-ac4a-e631f0e0a4c0)
 
 </td>
 </tr>
