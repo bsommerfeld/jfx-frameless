@@ -1,0 +1,113 @@
+/*
+ * JFX Frameless - Minimal Default Styles
+ * 
+ * Contains only structural essentials: dimensions, layout, cursor.
+ * Colors and theming are left to the consuming application.
+ */
+
+/* ============================================
+   ROOT & LAYOUT
+   ============================================ */
+
+.window-shell-root {
+    -fx-background-color: transparent;
+}
+
+.window-shell-layout {
+    -fx-background-color: transparent;
+}
+
+.window-shell-content {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ============================================
+   TITLE BAR
+   ============================================ */
+
+.title-bar {
+    -fx-min-height: 38px;
+    -fx-pref-height: 38px;
+    -fx-max-height: 38px;
+    -fx-padding: 0;
+}
+
+.title-bar-title {
+    -fx-font-size: 13px;
+}
+
+/* ============================================
+   MACOS TRAFFIC LIGHT CONTROLS
+   ============================================ */
+
+.macos-controls {
+    -fx-spacing: 8px;
+    -fx-padding: 0 0 0 12px;
+}
+
+.traffic-light-button {
+    -fx-background-radius: 50%;
+    -fx-min-width: 12px;
+    -fx-min-height: 12px;
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+    -fx-max-width: 12px;
+    -fx-max-height: 12px;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+/* macOS standard colors - required for recognition */
+.traffic-light-close {
+    -fx-background-color: #ff5f57;
+}
+
+.traffic-light-minimize {
+    -fx-background-color: #febc2e;
+}
+
+.traffic-light-zoom {
+    -fx-background-color: #28c840;
+}
+
+.traffic-light-icon {
+    -fx-stroke: rgba(0, 0, 0, 0.4);
+    -fx-stroke-width: 1.2;
+    -fx-fill: transparent;
+}
+
+/* ============================================
+   WINDOWS FLUENT CONTROLS
+   ============================================ */
+
+.windows-controls {
+    -fx-spacing: 0;
+}
+
+.window-control-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-min-width: 46px;
+    -fx-pref-width: 46px;
+    -fx-min-height: 38px;
+    -fx-pref-height: 38px;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+.window-control-icon {
+    -fx-stroke-width: 1;
+    -fx-fill: transparent;
+}
+
+/* Windows close button red - platform standard */
+.window-control-button.close-button:hover {
+    -fx-background-color: #e81123;
+}
+
+.close-button:hover .window-control-icon {
+    -fx-stroke: white;
+}
