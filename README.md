@@ -21,10 +21,12 @@ Modular window shell toolkit for JavaFX. Compose custom undecorated windows from
 ## What it does
 
 - Transparent, undecorated windows with optional rounded corners
-- Platform-native controls: macOS traffic lights, Windows 11 Fluent buttons
+- **Platform-styled controls**: macOS traffic lights, Windows 11 Fluent buttons
 - Edge-based resizing in all directions
 - Composable layout: title bar, sidebars, content, footer
 - JavaFX as `provided` - you bring your own runtime
+
+> **Note on "Native" Controls:** The window controls are styled to match platform conventions using JavaFX components (SVG + CSS). True OS-native controls with full hover behavior and system integration face JavaFX platform limitations. We're exploring solutions and welcome contributions! See [Known Limitations](#known-limitations) below.
 
 ## Requirements
 
@@ -172,6 +174,25 @@ module your.app {
     requires javafx.controls;
 }
 ```
+
+## Known Limitations
+
+Window controls are **platform-styled** (JavaFX SVG/CSS), not OS-native. This means:
+- ✅ Look and feel matches platform conventions
+- ⚠️ Native hover behaviors (macOS traffic light symbols, Windows tooltips) are emulated
+- ⚠️ Some platform-specific interactions (e.g., macOS green button fullscreen popup) are not available
+
+**Why?** JavaFX's `StageStyle.TRANSPARENT` removes native decorations, and accessing internal window handles requires non-public APIs. Apps like IntelliJ use [JetBrains Runtime](https://github.com/JetBrains/JetBrainsRuntime) (patched JVM) for this.
+
+**Contributions welcome!** If you have ideas or experience with native window integration, please open an issue or PR.
+
+## Contributing
+
+Found a bug? Have an idea? Want to tackle the native controls challenge?
+
+1. **Issues**: Report bugs or suggest features at [GitHub Issues](https://github.com/bsommerfeld/jfx-frameless/issues)
+2. **Pull Requests**: Contributions welcome! Please discuss major changes in an issue first
+3. **Native Controls**: This is our biggest challenge - any expertise appreciated!
 
 ## License
 
